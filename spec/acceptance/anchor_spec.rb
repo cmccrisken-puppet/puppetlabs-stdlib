@@ -1,6 +1,6 @@
 require 'spec_helper_acceptance'
 
-describe 'anchor type' do
+describe 'anchor type' , :integration do
   let(:pp) do
     <<-MANIFEST
       class anchored {
