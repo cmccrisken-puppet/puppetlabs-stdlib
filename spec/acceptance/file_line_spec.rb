@@ -2,7 +2,7 @@ require 'spec_helper_acceptance'
 
 test_file = (os[:family] == 'windows') ? 'C:\Users\Administrator\file_line_test.txt' : '/tmp/file_line_test.txt'
 
-describe 'file_line type' do
+describe 'file_line type', :integration do
   before(:each) do
     pp_test_file = <<-MANIFEST
       file { '#{test_file}':
